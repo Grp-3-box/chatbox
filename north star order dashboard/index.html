@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Tracking & Customer Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="main-container">
+    
+    <!-- Panel 1: Tracker -->
+    <aside class="lookup-box-wrapper">
+      <div class="panel-header">
+        <h3>Order Lookup</h3>
+        <p>Enter your 4-digit order number to check status.</p>
+      </div>
+
+      <div class="lookup-form">
+        <input type="text" id="order-input" placeholder="Enter Order #" maxlength="4">
+        <button id="lookup-btn">Track</button>
+      </div>
+
+      <div id="direct-result" class="direct-result-container">
+        <!-- Status card renders here when a user inputs their order -->
+      </div>
+    </aside>
+
+    <!-- Panel 2: Chatbot Support -->
+    <main class="chat-wrapper">
+      <header class="chat-header">
+        <div>
+          <h2>Support Assistant <span class="online-status">• Online</span></h2>
+        </div>
+        <div id="deflection-count" class="deflection-counter">0 deflected</div>
+      </header>
+
+      <section id="chat-messages" class="chat-messages">
+        <div class="message bot-message">
+          <div class="message-content">
+            Hello! Please enter your 4-digit order number and I will look up your shipment details immediately.
+          </div>
+        </div>
+      </section>
+
+      <footer class="chat-footer">
+        <input type="text" id="chat-input" placeholder="Type your message or order #...">
+        <button id="send-btn">Send</button>
+      </footer>
+    </main>
+
+  </div>
+
+  <!-- Live Map Modal -->
+  <div id="map-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Live Shipment Location</h3>
+        <span id="close-modal" class="close-btn">&times;</span>
+      </div>
+      <div class="map-graphic">
+        <div class="map-pin">Distribution Center</div>
+        <div class="map-route-line"></div>
+        <div class="map-pin" style="background: #3b82f6; color: #fff;">Delivery Hub</div>
+      </div>
+      <div class="map-details">
+        <p>Your package is currently en route between sorting facilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Return / Refund Modal -->
+  <div id="refund-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Return or Refund Request</h3>
+        <span id="close-refund-modal" class="close-btn">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">
+          Please select the reason for your request for <strong id="modal-order-id" style="color: var(--text-main);">Order</strong>:
+        </p>
+        <select id="refund-reason-select" style="width: 100%; padding: 10px; background: rgba(15, 23, 42, 0.8); border: 1px solid var(--card-border); border-radius: 8px; color: var(--text-main); font-size: 0.88rem; margin-bottom: 16px; outline: none;">
+          <option value="">-- Choose a reason --</option>
+          <option value="item_damaged">Item arrived damaged or broken</option>
+          <option value="wrong_item">Received wrong item or size</option>
+          <option value="delayed_delivery">Delivery took longer than expected</option>
+          <option value="no_reason">I don't have a specific reason / Prefer human assistance</option>
+        </select>
+        <button id="submit-refund-btn" style="width: 100%; padding: 10px; font-size: 0.88rem;">Process Request</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

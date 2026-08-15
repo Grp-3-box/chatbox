@@ -1,0 +1,379 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.logo:first-letter {
+    color: #16a34a;
+}
+
+.support-link {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.support-link:hover {
+    text-decoration: underline;
+}
+
+
+/* ================================
+   INTRODUCTION
+================================ */
+
+.intro {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.intro .label {
+    color: #16a34a;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+
+.intro p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 17px;
+}
+
+
+/* ================================
+   RETURN POLICY CARD
+================================ */
+
+.policy-card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.policy-card h2 {
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.policy-card p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.policy-card ul {
+    padding-left: 25px;
+}
+
+.policy-card li {
+    margin-bottom: 10px;
+    color: #374151;
+}
+
+
+/* ================================
+   FAQ SECTION
+================================ */
+
+.faq-section {
+    margin-bottom: 40px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+.faq-card {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: 0.2s ease;
+}
+
+.faq-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h3 {
+    font-size: 18px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.faq-card p {
+    color: #6b7280;
+}
+
+
+/* ================================
+   STILL NEED HELP SECTION
+================================ */
+
+.help-section {
+    background-color: #111827;
+    color: #ffffff;
+    text-align: center;
+    padding: 45px 30px;
+    border-radius: 12px;
+    margin-bottom: 60px;
+}
+
+.help-section h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.help-section p {
+    color: #d1d5db;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.help-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #16a34a;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #15803d;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #111827;
+}
+
+.btn-secondary:hover {
+    background-color: #e5e7eb;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVENESS
+================================ */
+
+@media (max-width: 700px) {
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .support-link {
+        font-size: 14px;
+    }
+
+    .intro {
+        padding: 40px 15px 30px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .intro p {
+        font-size: 15px;
+    }
+
+    .policy-card {
+        padding: 25px 20px;
+    }
+
+    .faq-card {
+        padding: 20px;
+    }
+
+    .help-section {
+        padding: 35px 20px;
+    }
+
+    .help-section h2 {
+        font-size: 25px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+
+/* Return Request Modal (return card styling) */
+
+.return-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.return-modal.active {
+    display: flex;
+}
+
+.returns-card {
+    position: relative;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.returns-card h2 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.returns-card p.subtitle {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccd1d1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+.close-return {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 1.8rem;
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+.close-return:hover {
+    color: #2c3e50;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Returns & Refunds | Northstar Retail AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Return Request Modal -->
+    <div id="return-modal" class="return-modal">
+
+        <div class="returns-card">
+
+            <button type="button" class="close-return" id="close-return-form">
+                &times;
+            </button>
+
+            <h2>Request a Return</h2>
+
+            <p class="subtitle">
+                Fill out the form below to start your return process.
+            </p>
+
+            <form id="return-request-form">
+
+                <div class="form-group">
+
+                    <label for="order-id">Order Number</label>
+
+                    <input
+                        type="text"
+                        id="order-id"
+                        name="order-id"
+                        placeholder="e.g., NS1001"
+                        required
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="reason">Reason for Return</label>
+
+                    <select id="reason" name="reason" required>
+
+                        <option value="" disabled selected>
+                            Select a reason...
+                        </option>
+
+                        <option value="damaged">
+                            Item arrived damaged
+                        </option>
+
+                        <option value="wrong-size">
+                            Wrong size / fit
+                        </option>
+
+                        <option value="changed-mind">
+                            Changed my mind
+                        </option>
+
+                        <option value="not-as-described">
+                            Not as described
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Submit Return Request
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            NORTHSTAR RETAIL SUPPORT
+        </div>
+
+        <a href="#" class="support-link">
+            Contact Support
+        </a>
+
+    </header>
+
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Introduction -->
+        <section class="intro">
+
+            <p class="label">
+                CUSTOMER SUPPORT
+            </p>
+
+            <h1>
+                Returns & Refunds
+            </h1>
+
+            <p>
+                Find answers to common questions about returning
+                products and receiving refunds.
+            </p>
+
+        </section>
+
+
+        <!-- Return Policy -->
+        <section class="policy-card">
+
+            <h2>
+                📦 Return Policy
+            </h2>
+
+            <p>
+                We want you to be satisfied with your purchase.
+                If you need to return an item, please review the
+                return requirements below before submitting a request.
+            </p>
+
+            <ul>
+
+                <li>
+                    Items should be in their original condition.
+                </li>
+
+                <li>
+                    Proof of purchase may be required.
+                </li>
+
+                <li>
+                    Some products may have specific return conditions.
+                </li>
+
+                <li>
+                    Return requests should be submitted through customer support.
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- Frequently Asked Questions -->
+        <section class="faq-section">
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+
+            <div class="faq-card">
+
+                <h3>
+                    How do I request a return?
+                </h3>
+
+                <p>
+                    Contact customer support and provide your order
+                    number and the reason for the return. Our support
+                    team will guide you through the next steps.
+                </p>
+
+            </div>
+
+
+            <div class="faq-card">
+
+                <h3>
+                    How long does a refund take?
+                </h3>
+
+                <p>
+                    Refund processing times may vary depending on the
+                    payment method used. You will be informed when
+                    your refund has been processed.
+                </p>
+
+            </div>
+
+
+            <div class="faq-card">
+
+                <h3>
+                    What if I received a damaged or incorrect item?
+                </h3>
+
+                <p>
+                    Contact support as soon as possible and provide
+                    your order details and information about the issue.
+                    The support team will help determine the appropriate
+                    resolution.
+                </p>
+
+            </div>
+
+
+            <div class="faq-card">
+
+                <h3>
+                    Can I return every product?
+                </h3>
+
+                <p>
+                    Return eligibility may depend on the type and
+                    condition of the product. Check the applicable
+                    return conditions before submitting your request.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Still Need Help -->
+        <section class="help-section">
+
+            <h2>
+                Still Need Help?
+            </h2>
+
+            <p>
+                If you cannot find the answer you are looking for,
+                our support team is ready to help.
+            </p>
+
+
+            <div class="help-buttons">
+
+                <button
+                    type="button"
+                    class="btn-primary"
+                    id="open-return-form"
+                >
+                    Request a Return / Refund
+                </button>
+
+
+                <a
+                    href="#"
+                    class="btn-secondary"
+                >
+                    Contact Support
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
