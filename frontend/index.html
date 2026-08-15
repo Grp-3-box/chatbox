@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Order Tracker</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+      <div class="brand">Order<span>Tracker</span></div>
+      <div class="eyebrow" id="order-count"></div>
+    </header>
+
+    <h1>Track your order</h1>
+
+    <div class="search-row">
+      <input
+        id="search"
+        type="text"
+        placeholder="Search by order ID or name — e.g. NS1002"
+        autocomplete="off"
+      >
+    </div>
+
+    <div id="order-list">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
