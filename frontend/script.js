@@ -1,5 +1,5 @@
 async function fetchOrders() {
-  const response = await fetch("../data/orders.json");
+  const response = await fetch("data/orders.json");
 
   if (!response.ok) {
     throw new Error("Failed to load orders.json");
